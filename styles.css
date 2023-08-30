@@ -1,0 +1,30 @@
+body {
+    background:linear-gradient(rgba(13,79,219,1) 0%, rgba(0,0,0,1) 95%);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    z-index: -1;
+}
+
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 999;
+
+}
+
+.square {
+    width: calc(100% / 64); /* Each square takes 1/16 of the container width */
+    padding-bottom: calc(100%/ 64);
+    background-color: #333;
+}
+
