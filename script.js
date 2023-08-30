@@ -72,4 +72,9 @@ const pixelArray = Array.from(pixels);
     pixelArray.forEach(pixel => {
         pixel.style.cssText = "background: #333";
     })
+
+    const sliderValue = document.querySelector("#grid-size");
+    sliderValue.value = 16;
+    const sliderDisplay = document.querySelector(".slider p");
+    sliderDisplay.textContent = 16;
 })
