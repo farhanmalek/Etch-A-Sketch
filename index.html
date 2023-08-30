@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-    <button class="enable">Click ME for 16 x 16 Grid!</button>
-    <div class="container">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+        <h1> Etch-A-Sketch</h1>
+      <div class="container"></div>
+      <div class="buttons">
+        <div class="slider">
+            <label for="grid-size">Grid Size:</label>
+            <input type="range" id="grid-size" name="grid-size" min="16" max="64" value="0" step="2">
+            <p>16</p>
+        </div>
+            <button id="reset">Reset</button>
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#FFFFFF"><br><br>
+      </div>
     </div>
-</body>
+    
+  </body>
 </html>
