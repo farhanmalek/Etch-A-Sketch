@@ -1,7 +1,6 @@
 const myContainer = document.querySelector(".container");
 
-const pixels = document.querySelectorAll(".square");
-const pixelArray = Array.from(pixels);
+
 let x = false;
 let y = false;
  // Replace with your container's ID
@@ -42,8 +41,11 @@ slider.oninput = function (e)  {
 
 //Add functionality to grid, where we can now change the grid size based on what the slider value;
 slider.addEventListener('mouseup', () => {
+    while (myContainer.firstChild) {
+        myContainer.removeChild(myContainer.firstChild);
+    }
     const myValue = parseInt(document.querySelector(".slider p").textContent); // Assuming you have an element with the ID "myContainer"
-    for (let i = 0; i < Math.pow(myValue, 2); i++) {
+    for (let i = 0; i < ((Math.pow(myValue, 2))); i++) {
         const div = document.createElement("div");
         div.classList.add("square");
         myContainer.appendChild(div);
@@ -51,7 +53,7 @@ slider.addEventListener('mouseup', () => {
 
     const pixelArray = document.querySelectorAll(".square");
     pixelArray.forEach((pixel) => {
-        pixel.style.cssText = `width: calc(100% / ${myValue}); padding-bottom: calc(100% / ${myValue});`;
+        pixel.style.cssText = `width: calc(100% / ${myValue}); height: calc(100% / ${myValue});`;
     });
 });
 

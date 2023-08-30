@@ -20,19 +20,20 @@ body {
 
 .square {
     width: calc(100%/16);
-    padding-bottom: calc(100%/ 16);
+    height: calc(100%/ 16);
     background-color: #333;
     border: 1px solid black;
     box-sizing: border-box;
 }
 
 .container {
-    height: 60vh;
+    height: 50vh;
     width: 50vh;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
     overflow: hidden;
+    
 }
 
 
